@@ -860,6 +860,15 @@ contexts:
         )
       scope: support.function.builtin.ruby
       push: function-call-arguments
+      # Lambda from the Kernel class not handled elsewhere
+    - match: |-
+        (?x:
+          (
+            ->
+          )
+        )
+      scope: support.function.builtin.ruby
+      push: function-call-arguments
     # Methods from the Module class not handled elsewhere
     - match: |-
         (?x:
